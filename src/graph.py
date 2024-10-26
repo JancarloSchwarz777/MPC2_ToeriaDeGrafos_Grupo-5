@@ -66,5 +66,5 @@ class Graph:
                     dot.edge(vertex, neighbor)  # Arista sin resaltar
 
         # Guardar la imagen en el directorio assets
-        output_path = os.path.join("C:\\Users\\usuario\\Desktop\\MPC2\\assets", f"{name}.png")
-        dot.render(output_path.split('.png')[0], format="png")
+        output_path = Path.home() / 'Desktop' / 'MPC2' / 'assets' / f"{name}.png"
+        dot.render(output_path.with_suffix(''), format='png')
